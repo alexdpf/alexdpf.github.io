@@ -5,6 +5,7 @@ export default function handler(
 ) {
     return async function (event: APIGatewayProxyEvent, context: Context) { 
         let body, statusCode;
+        
         try { 
             // Run the Lambda 
             body = await lambda(event, context); 
@@ -22,7 +23,8 @@ export default function handler(
             headers: {
                 "Access-Control-Allow-Origin": "*", 
                 "Access-Control-Allow-Credentials": true,
-                },
+                "Access-Control-Allow-Headers": "Authorization,Content-Type,X-Requested-With"//put this to try and solve it
+            },
         }; 
     }; 
 }
