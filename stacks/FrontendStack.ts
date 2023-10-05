@@ -10,7 +10,13 @@ export function FrontendStack({ stack, app }: StackContext) {
 
     // Define our React app 
     const site = new StaticSite(stack, "ReactSite", { 
-        customDomain: undefined,
+        customDomain: 
+            app.stage === "prod" 
+            ? {
+                domainName: "scratchbyalexdpf.com", 
+                domainAlias: "www.scratchbyalexdpf.com",
+            }
+           : undefined,
         path: "packages/frontend", 
         buildCommand: "pnpm run build", 
         buildOutput: "dist", 

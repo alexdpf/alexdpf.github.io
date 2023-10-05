@@ -1,1 +1,6 @@
-{}
+{
+  "hosted-zone:account=558105352120:domainName=scratchbyalexdpf.com:region=us-east-1": {
+    "Id": "/hostedzone/Z04181397UEO4ZO6ENAZ",
+    "Name": "scratchbyalexdpf.com."
+  }
+}
